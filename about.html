@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>测试页面</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="css/main.css" type="text/css" />
+        <script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="/">测试站点</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li> <a href="/">主页</a> </li>
+                            <li class="active"> <a href="/about.html">关于</a> </li>
+                            <li> <a href="https://github.com/usbuild" target="_blank">GitHub</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <fieldset>
+                <legend>这个站点是干嘛的</legend>
+                这仅仅是一个演示站点，由于展示 <a href="https://github.com/usbuild/uws" target="_blank">uws</a> 和 <a href="https://github.com/usbuild/distmem">distmem</a> 的基本功能。首页是一个十分简单的留言板程序，数据存储在distmem中，而整个网站是运行在uws服务器上的。
+            </fieldset>
+            <br/>
+            <fieldset>
+                <legend>技术架构</legend>
+                下图是总体架构概览图：<br />    
+                <center><img src="img/uws.png" alt="" /></center>
+                <br/>
+                您的请求发送到 uws 服务器上，服务器经过多次过滤请求，把请求交给 fastcgiRouter 处理。<br />
+                该 Router 对来访请求进行分析，抽离出头信息，构造
+                <a href="http://www.fastcgi.com" target="_blank">fastcgi </a>
+                协议包发送到本服务器运行的 <a href="http://php-fpm.org/" target="_blank">php-fpm</a>上，php-fpm是php语言的fastcgi服务器。<br/>
+                php服务器通过我编写的
+                <a href="https://github.com/usbuild/php_distmem" target="_blank">php_distmem</a>
+                驱动连接到distmem服务器上，distmem是一个数据库服务器，监听4327端口，distmem通过查询或修改存储的数据返回结果，再层层返回，最终回到您的浏览器中。
+                <br />
+                若希望了解更多，欢迎访问本人的<a href="http://github.com">Github项目主页</a>。
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend>联系我</legend>
+            <ul>
+                <li>GitHub <a href="http://github.com">http://github.com/usbuild</a>
+                </li>
+                <li>Sina-Weibo <a href="http://weibo.com/usbuild">http://weibo.com/usbuild</a>
+                </li>
+                <li>Email <a href="mailto:njuzhangqichao@gmail.com">njuzhangqichao@gmail.com</a>
+                </li>
+            </ul>
+            </fieldset>
+        
+        </div>
+    </body>
+</html>
