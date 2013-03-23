@@ -60,7 +60,7 @@ body > .navbar .brand {
         <div class="content-container">
             <fieldset>
                 <legend>这个站点是干嘛的</legend>
-                这仅仅是一个演示站点，由于展示 <a href="https://github.com/usbuild/uws" target="_blank">uws</a> 和 <a href="https://github.com/usbuild/distmem">distmem</a> 的基本功能。首页是一个十分简单的留言板程序，数据存储在distmem中，而整个网站是运行在uws服务器上的。
+                这仅仅是一个演示站点，用于展示 <a href="https://github.com/usbuild/uws" target="_blank">uws</a> 和 <a href="https://github.com/usbuild/distmem">distmem</a> 的基本功能。首页是一个十分简单的留言板程序，数据存储在distmem中，而整个网站是运行在uws服务器上的, 数据库、服务器和连接驱动都是本人独立完成的。
             </fieldset>
             <br/>
             <fieldset>
@@ -76,34 +76,26 @@ body > .navbar .brand {
                 <a href="https://github.com/usbuild/php_distmem" target="_blank">php_distmem</a>
                 驱动连接到distmem服务器上，distmem是一个数据库服务器，监听4327端口，distmem通过查询或修改存储的数据返回结果，再层层返回，最终回到您的浏览器中。
                 <br />
-                若希望了解更多，欢迎访问本人的<a href="http://github.com">Github项目主页</a>。
+                若希望了解更多，欢迎访问本人的<a href="http://github.com/usbuild">Github项目主页</a>。
             </fieldset>
             <br />
-            <fieldset>
-                <legend>联系我</legend>
-            <ul>
-                <li>GitHub <a href="http://github.com">http://github.com/usbuild</a>
-                </li>
-                <li>Sina-Weibo <a href="http://weibo.com/usbuild">http://weibo.com/usbuild</a>
-                </li>
-                <li>Email <a href="mailto:njuzhangqichao@gmail.com">njuzhangqichao@gmail.com</a>
-                </li>
-            </ul>
-            </fieldset>
-       	<br /><br /> 
-<div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'uwsdemosite'; // required: replace example with your forum shortname
+       	<br /> 
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"uwsdemo"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->
+
         </div>
     </body>
-</html>
+    </html>
